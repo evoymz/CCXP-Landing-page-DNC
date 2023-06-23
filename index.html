@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CCXP</title>
+</head>
+<body>
+    <header>
+        <img src="assets/logoCCXP.svg" alt="">
+    </header>
+
+    <!--PARTE PRINCIPAL, TEXTOS COUNTDOWN E VIDEO-->
+
+        <main>
+            <div id="container-text">
+                <h1>REVIVA O ÉPICO</h1>
+                <h3>DE 01 A 04 DE DEZEMBRO</h3>
+                <p>Você consegue sentir? É aquela sensação de<br> finalmente poder falar em voz alta: "estamos<br> em casa". Sim, em dezembro de 2022,<br> teremos a volta da CCXP física. Mas não será<br> qualquer CCXP, vai ser a maior de todos os<br> tempos. Prepare-se para visitar seus<br> universos favoritos, explorar o Artists' Valley,<br> se emocionar nos auditórios e encontrar<br> aventuras épicas a cada passo pelos nossos corredores.</p>
+            </div>
+
+            <div id="countVideo">
+                <div id="timer">
+                    <div>
+                        <h1 id="dia"></h1>
+                    </div>
+                    <span>D</span>
+                    <div>
+                        <h1 id="hora"></h1>
+                        
+                    </div>
+                    <span>H</span>
+                    <div>
+                        <h1 id="minutos"></h1>
+                        
+                    </div>
+                    <span>M</span>
+                    <div>
+                        <h1 id="segundos"></h1>
+                    </div>
+                    <span>S</span>
+                </div>
+
+                <h3>PARA A MAIOR CCPX DE TODOS OS TEMPOS</h3>
+
+                <video width="700px" controls loop autoplay="autoplay" controls muted><source src="assets/Arlequina.mp4" type="video/mp4"></video>
+            </div>
+        </main>
+
+        <!--PARTE INFERIOR, INGRESSOS E BOTAO-->
+        <h1 id="footerTitle">AINDA DÁ TEMPO DE GARANTIR O SEU, MAS CORRE!</h1>
+
+        <div id="tickets">
+            <div>
+                <img src="assets/ing-quinta.svg" onclick="selectCard('#thursday')" onmouseover="highlightCard('#thursday')" onmouseout="highlightCard('#thursday')" class="ticket-card" id="thursday" alt="">
+                <img src="assets/ing-sexta.svg" onclick="selectCard('#friday')" onmouseover="highlightCard('#friday')" onmouseout="highlightCard('#friday')" class="ticket-card" id="friday" alt="">
+                <img src="assets/ing-sabado.svg" onclick="selectCard('#saturday')" onmouseover="highlightCard('#saturday')" onmouseout="highlightCard('#saturday')" class="ticket-card" id="saturday" alt="">
+                <img src="assets/ing-domingo.svg" onclick="selectCard('#sunday')" onmouseover="highlightCard('#sunday')" onmouseout="highlightCard('#sunday')" class="ticket-card" id="sunday" alt="">
+            </div>
+            <button onclick="showSelectedCards()">GARANTA O SEU!</button>
+        </div>
+
+        <footer>
+            <form action="https://www.instagram.com/cmlfrtsz">
+                <input type="email" placeholder="Seu email" required>
+                <input type="submit" id="button-submit">
+            </form>
+        </footer>
+
+    <script src="countDown.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
